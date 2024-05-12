@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,400&display=swap"); 
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@font-face {
+  font-family: headings;
+  font-display: swap;
+  font-weight: 700;
+  src: url(https://static.saltinourhair.com/build/fonts/SaltHeading.woff2)
+      format("woff2"),
+    url(https://static.saltinourhair.com/build/fonts/SaltHeading.woff)
+      format("woff");
+}
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.login-container img {
+    filter: brightness(100%) !important;
+    height: 100vh;
+}
+.signin {
+    line-height: 2.5rem;
+    /* position:absolute;
+    left: 64rem;
+    top: 12rem; */
+    font-weight: bold;
+    font-style:italic;
+    font-family: "Merriweather Sans";
+    color: #353535;
+    margin-right: 150px;
+
+}
+
+.Info {
+    line-height: 1.5rem;
+}
+
+h1{
+    font-size: 2.5rem;
+}
+
+p{
+    font-size: 1rem;
+}
+
+.A0{
+    font-weight:bold;
+    font-style: italic;
+    margin-bottom:1px;
+    font-family:headings;
+}
+
+.flex1 {
+    display: flex;
+}
+.flex1 a:hover{
+    scale: 1.08;
+    transition: 0.5;
+}
+.A1{
+    color: #8fbc8f !important;
+    flex-grow:3;
+    text-align: center;
+    margin-top: 0.1px;
+    margin-left: 3rem;
+    margin-right: 1rem;
+    font-family: "Merriweather";
+}
+.A2{
+    font-weight:bold;
+    font-style: italic;
+    flex-grow:1;
+    margin-top: 0.1px;
+}
+
+.flex2 {
+    display: flex;
+}
+.flex2:hover{
+    cursor: pointer;
+    
+}
+.A3{
+    font-size:0.8rem;
+    flex-grow:3;
+    padding-left: 10px;
+
+
+}
+.A4{
+    font-size:0.8rem;
+    flex-grow:1;
+    text-align: right;
+}
+
+.A5{
+    text-align: center;
+}
+
+input[type=text], input[type=submit] {
+    width: 100%;
+    padding:0.5rem;
+    border-radius: 8px;
+    border: 1px solid ;
+    font-style: italic;
+}
+.Input {
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between; */
+    position: relative;
+
+}
+.Input Input{
+    width: 100%;
+    padding:0.5rem;
+    border-radius: 8px;
+    border: 1px solid ;
+    font-style: italic;
+  }
+
+.icons-span{
+    position: absolute;
+    right: 10px;
+    padding-top: 0.5rem; 
+    font-size: 20px
+    
+}
+
+.IP1{
+  margin-top:1rem;
+  background-color: black;
+  color: white;
+  font-family: "Merriweather Sans"
+}
+.IP1:hover{
+    scale: 1.08;
+    transition: 0.5s;
+}
+.IP2:hover{
+    scale: 1.08;
+    transition: 0.5s;
+}
+
+.passDis {
+    margin-top: 15px;
+}
+
+
+
+
+.IP2 {
+  background-color: white;
+  font-weight: bold;
+  font-style: italic;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 40px 5px;
+  color: #353535;
+
+}
+
+.icon1 {
+    position:relative;
+    /* bottom: -5px;
+    left: 3rem; */
+    right: 10px;
+    font-size: 20px;
+  }
+  .icon-gg {
+position: absolute;
+right: 10px;
+top: 10px;
+  }
+

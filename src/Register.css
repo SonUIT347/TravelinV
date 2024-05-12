@@ -1,0 +1,160 @@
+.register {
+    line-height: 2.5rem;
+    /* position:absolute;
+    left: 62rem;
+    top: 10rem; */
+    font-weight: bold;
+    font-style:italic;
+    font-family: "Merriweather Sans";
+    color: #353535;
+    margin-right: 150px;
+}
+.register-container img {
+    filter: brightness(100%) !important;
+    height: 100vh;
+}
+.register-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Info {
+    line-height: 1.5rem;
+}
+
+h1{
+    font-size: 2.5rem;
+}
+
+p{
+    font-size: 1rem;
+    
+}
+
+.A0{
+    font-weight:bold;
+    font-style: italic;
+    margin-bottom:1px;
+    font-family: headings;
+}
+
+.flex1 {
+    display: flex;
+}
+.A1{
+    color: #8fbc8f !important;
+    text-align: center;
+    margin-top: 0.1px;
+    margin-left: 6rem;
+    font-family: "Merriweather";
+}
+.A2{
+    font-weight:bold;
+    font-style: italic;
+    margin-top: 0.1px;
+}
+
+
+.flex2 {
+    display: flex;
+}
+.A3{
+    font-size:0.8rem;
+    padding-left: 10px;
+}
+
+
+.A5{
+    text-align: center;
+}
+
+input[type=text], input[type=submit] {
+    width: 100%;
+    padding:0.5rem;
+    border-radius: 8px;
+    border: 1px solid ;
+    font-style: italic;
+}
+.Input Input{
+    padding:0.5rem;
+    border-radius: 8px;
+    border: 1px solid ;
+    font-style: italic;
+  }
+
+.InputCon Input{
+    width: 100%;
+    padding:0.5rem;
+    border-radius: 8px;
+    border: 1px solid ;
+    font-style: italic;
+}
+.InputCon {
+position: relative;
+}
+
+
+
+.icons-span-1{
+    position:absolute;
+    right: 1rem;
+    padding-top:0.5rem;
+    font-size:20px;
+}
+  
+.icons-span-2{
+    position: absolute;
+    right: 12px;
+    padding-top:0.5rem;
+    font-size:20px;
+}
+
+.IP1{
+  margin-top:1rem;
+  background-color: black;
+  color: white;
+  font-family: "Merriweather Sans"
+}
+
+.IP2 {
+  background-color: white;
+  font-weight: bold;
+  font-style: italic;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 50px 5px;
+  color: #353535;
+  font-family: "Merriweather Sans"
+
+}
+
+.passDis {
+    margin-top: 15px;
+}
+
+.confDis {
+    margin-top: 15px;
+}
+
+.useDis {
+    margin-top: 15px;
+}
+
+.icon {
+    position:absolute;
+    bottom: -5px;
+    left: 5rem;
+    font-size: 20px;
+}
+.notification{
+    font-style: normal;
+    font-family: headings;
+    font-size: 14px;
+    color: red;
+}
+.icon_ImNotification{
+  margin-left: 5px;
+  position: relative;
+  top: 2px;
+}

@@ -1,0 +1,488 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@font-face {
+  font-family: headings;
+  font-display: swap;
+  font-weight: 700;
+  src: url(https://static.saltinourhair.com/build/fonts/SaltHeading.woff2)
+      format("woff2"),
+    url(https://static.saltinourhair.com/build/fonts/SaltHeading.woff)
+      format("woff");
+}
+.Thang_avatar {
+    display: block;
+    text-align: center;
+    height: auto;
+
+  }
+
+  /* #Thang_avatar_child{
+    display: inline-block;
+    width: 100%;
+    margin-top: 90px;
+  } */
+
+  #Thang_avatar_child{
+    display: block;
+    width: 100%;
+    height: 200px;
+    margin-top: 80px;
+  }
+  
+  #Thang_avatar_child img{
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    border-radius: 51% 49% 49% 51% / 59% 56% 44% 41%;
+    margin-top: -7px;
+    /* -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    transform: rotateY(180deg); */
+  }
+  
+  #Thang_card{
+    display: inline-block;
+    width: 850px;
+    height: 320px;
+    top: 235px;
+    position: absolute;
+    z-index: -1;
+    background-color: #C1E2E1;
+    border-radius: 20px;
+    background-image: url(../src/image/search-bubbles.png),url(../src/image/search-bubbles.png);
+    background-position: top right;
+    background-size: cover, cover, cover, cover;
+  }
+  
+  #Thang_content0{
+    display: inline-block;
+    position: relative;
+    width: 850px;
+    height: 320px;
+    /* background-color: rgb(169, 136, 5); */
+    background-color: none;
+    /* background-color: #C1E2E1; */
+    border-radius: 10px;
+    top: -95px;
+    margin-bottom: -50px;
+    /* z-index: -1; */
+  }
+  #Thang_content0 button:hover {
+    color:black;
+  }
+
+  .Thang_name {
+    display: block;
+    font-size: 35px;
+    margin-top: 80px;
+    font-family: "Merriweather Sans";
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  
+  #Thang_setting {
+    display: inline-block;
+    position: absolute;
+    border: none;
+    color:#353535;
+    background-color: inherit;
+    font-size: 30px;
+    top: 0px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    /* background-color: red; */
+  
+  }
+
+
+/* Phần chỉnh sửa thông tin cá nhân */
+  #Thang_edit_setting {
+    display: inline-block;
+    overflow: hidden;
+  }
+  
+  #Thang_setting:hover {  color: black;overflow: -moz-hidden-unscrollable;}
+
+  #Thang_edit_setting #Thang_edit {
+    display: none;
+    /* display: inline-block; */
+    position: absolute;
+    background-color: #fefefe;
+    top: 45px;
+    right: 20px;
+    border-radius: 20px;
+    width: 200px;
+    height: 40px;
+    border: none;
+    overflow: hidden;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  #Thang_setting:hover + #Thang_edit {
+    display: inline-block;
+    overflow: hidden;
+  }
+
+  #Thang_edit_setting #Thang_edit:hover{
+    display: inline-block;
+    /* background-color: #ffffff; */
+    font-weight: 600;
+    background-color: #f5f5f5;
+    font-size: 13.5px;
+
+  }
+  
+  #Thang_tab {
+    display: inline-flex;
+    margin-top: 20px;
+  }
+  
+  .Thang_tab_content {
+    margin: 30px 40px;
+    font-size: 23px;
+    font-family: headings;
+  }
+
+  .Thang_tab_content > span{
+    font-weight: 700;
+  }
+  
+  
+  #Thang_content {
+    display: block;
+    margin-top: -9px;
+  
+  }
+
+  .Thang_a{
+    display: inline-block;
+  }
+  
+  #Thang_content button {
+    width: 190px;
+    height: 60px;
+    display: inline;
+    font-size: 27px;
+    border:none;
+    background-color: inherit;
+    margin: 0 90px;
+    color: rgb(117, 115, 115);
+    text-align: center;
+    font-family: headings;
+  }
+
+  #Thang_content span{
+    font-size: 24px;
+    vertical-align: -3px;
+  }
+
+  .Thang_Icon_Pending{
+    font-size: 30px;
+    vertical-align: -3px;
+  }
+  
+  #Thang_content button:hover{
+    font-weight:bold;
+    color: black;
+  }
+  
+  #Thang_content p {
+    display: inline-block;
+    margin: 0px;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: headings;
+  }
+  
+  
+  #Thang_content div {
+    display: block;
+    text-align: center;
+  }
+  
+  #Thang_hr {
+    display: inline-block;
+    width:1090px;
+    height: 0;
+    text-align: center;
+    border-width: 1.3px;
+    color: #838383;
+  }
+  
+  /* .Thang_a {
+    display: inline;
+    position: absolute;
+    background-color: red;
+  } */
+  
+  #Thang_content1 {
+    display: inline-block;
+    margin-top: 25px;
+    width: 1110px;
+    height: auto;
+    text-align: left;
+    letter-spacing: -1px;
+    font-family: "Merriweather Sans";
+  }
+  
+  #Thang_content1 > div {
+    display: inline-block;
+    position: relative;
+    width: 350px;
+    height: 467px;
+    overflow: hidden;
+    border-radius: 5%;
+    margin: 7px 10px;
+  }
+  
+  #Thang_content1 img {
+    display: inline-block;
+    width: 350px;
+    height: 467px;
+    border-radius: 5%;
+    transition: 1s;
+  }
+  
+  #Thang_content1 img:hover {
+    transform: scale(1.1);
+    transition: 1s;
+  }
+  
+  #Thang_CONTENT {
+    display: inline-block;
+    position: absolute;
+    font-style: italic;
+    color: white;
+  }
+  
+  #Thang_CONTENT_mokuji {
+    display: inline-block;
+    position: absolute;
+    width: 320px;
+    height: 0;
+    top: 10px;
+    /* background-color: red; */
+    margin: 0;
+    color: white;
+    text-align: right;
+  }
+  
+  #Thang_CONTENT_mokuji > button{
+    display: inline-block;
+    font-size: 35px;
+    font-weight: bold;
+    background: none;
+    color: white;
+    border: none;
+    margin-top: 15px;
+    margin-right: 5px;
+  }
+  
+  #Thang_div_mokuji {
+    display: block;
+    position: absolute;
+    width: 130px;
+    height: 90px;
+    background-color: white;
+    margin-left: 185px;
+    border-radius: 50%;
+    font-size: 10px;
+    text-align: center;
+  }
+  
+  /* #mokuji_edit {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 15px;
+    border: none;
+    background-color: white;
+  } */
+  
+  #Thang_mokuji_remove {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+    border:none;
+    background-color: white;
+  }
+  
+  
+  #Thang_CONTENT_mokuji > button:hover{
+    font-size: 38px;
+    background: none;
+    color: white;
+    font-weight: bold;
+    border: none;
+    margin-top: 15px;
+    margin-right: 5px;
+  }
+  
+  #Thang_CONTENT_mokuji > button:focus{
+    font-size: 38px;
+  }
+  /* ----------------------------------------- */
+  
+  #Thang_text_right {
+    width: 50px;
+    height: 50px;
+    margin-top: 15px;
+    font-size: 35px;
+  }
+  
+  .Thang_li {
+    display: inline-block;
+    width: 50px;
+    height: auto;
+    line-height: 33px;
+    position: relative;
+    font-size: 20px;
+  }
+  
+  .Thang_edit_remove {
+    display: inline;
+    background: white;
+    list-style-type: none;
+    width: 100px;
+    height: auto;
+    padding: 0;
+    margin-top: -5px;
+    margin-left: -54px;
+    font-family: "Merriweather Sans";
+    font-weight: 600;
+  }
+  
+  #Thang_bstextright{
+    color: white;
+  }
+  
+  .Thang_span{
+    vertical-align: -2px;
+  }
+  
+  .Thang_edit_remove {
+    display: none;
+    /* display: block; */
+    position: absolute;
+    border-radius: 5px;
+    text-align: center;
+    color: #838383;
+    overflow: hidden;
+   }
+  
+  .Thang_edit_remove .Thang_li {
+    width: 100px;
+    height: 35px;
+    margin: 0;
+    color: #838383;
+    font-size: 16px;
+  }
+
+  .Thang_edit_remove .Thang_li:hover {
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    color: #353535;
+    font-weight: bold;
+    transform: scale(1.05);
+    /* box-sizing: border-box; */
+  }
+  
+  .Thang_li:hover .Thang_edit_remove {
+    display: block;
+    border-radius: 5px;
+  }
+  
+  .Thang_edit_remove .Thang_li {
+    margin-left: 0 !important;
+   }
+   /*  */
+   #Thang_li1 {
+    display: block;
+    width: 100px;
+    height: 35px;
+    margin: 0;
+    color: #838383;
+    font-size: 16px;
+  }
+
+  #Thang_li1:hover {
+    background-color: #f5f5f5;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: #353535;
+    font-weight: bold;
+    transform: scale(1.05);
+  }
+  
+  #Thang_li1:hover .Thang_edit_remove {
+    display: block;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  
+  #Thang_li1 {
+    margin-left: 0 !important;
+   }
+   /*  */
+   #Thang_li2 {
+    width: 100px;
+    height: 35px;
+    margin: 0;
+    color: #838383;
+    font-size: 16px;
+  }
+
+  #Thang_li2:hover {
+    background-color: #f5f5f5;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-weight: bold;
+    color: #353535;
+    transform: scale(1.05);
+  }
+  
+  #Thang_li2:hover .Thang_edit_remove {
+    display: block;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  
+  #Thang_li2 {
+    margin-left: 0 !important;
+   }
+  /* ------------------------------------------------- */
+  
+  #Thang_content1 h1 {
+    display: block;
+    text-align: justify;
+    margin: 15px;
+    margin-top: 3px;
+    font-size: 30px;
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis ;
+    width: 300px;
+  }
+  
+  #Thang_content1 p {
+    display: block;
+    margin: 0px 15px 0px;
+    bottom: 20px;
+    left: 0;
+    font-weight: 300;
+  }
+
+  /* #Thang_content_Author {
+    display: block;
+    margin: 0 15px;
+    margin-bottom: -10px;
+    color: red;
+  } */
+  
+  

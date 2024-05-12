@@ -1,0 +1,129 @@
+.profile-form {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 100px;
+}
+.profile-title {
+  /* text-align: center; */
+  font-size: 55px;
+  /* margin-left: 555px; */
+}
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 80px 100px 0 100px;
+  padding-right: 50px;
+}
+
+.profile-nextbtn {
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-family: headings;
+  font-size: 20px;
+  /* width: 70px; */
+  /* height: 40px; */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0 7px;
+  
+}
+.profile-nextbtn:hover{
+  scale: 1.08;
+  transition: 0.3s;
+  background-color: #d2d2d2;
+  
+}
+
+.profile-image {
+  border: 2px dashed #353535;
+  width: 250px;
+  height: 350px;
+  font-size: 18px;
+  position: relative;
+  border-radius: 6px;
+  /* overflow: hidden; */
+  display: flex;
+  align-items: center;
+  margin-right: 130px;
+}
+.profile-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* padding: 50px 60px; */
+  width: 250px;
+  height: 350px;
+  cursor: pointer;
+}
+.profile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.profile-input span {
+  margin: 25px 0;
+}
+.profile-input input {
+  margin: 10px 0;
+  font-family: "Merriweather Sans";
+}
+.choice-gender-container {
+  display: flex;
+}
+.choice-gender {
+  margin: 0 50px;
+}
+.choice-gender input {
+  margin: 0 5px;
+}
+.submit-profile input[type="submit"] {
+  width: 115px;
+  height: 45px;
+  align-items: flex-start;
+  background-color: #f1bc68;
+  border-radius: 1287px;
+  box-shadow: #d8a04e 3px 4px 0px 0px;
+  color: #ffffff;
+
+  font-family: "Merriweather Sans";
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  line-height: 24.05px;
+  margin: 15px 0;
+  padding: 10.4px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+.update-img {
+  color: #353535;
+  z-index: 1;
+  border-radius: 51% 49% 49% 51% / 59% 56% 44% 41%;
+  background-color: var(--lightblue);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  cursor: pointer;
+}
+.update-img:hover {
+  transition-duration: 1s;
+  transform: scale(1.08);
+}

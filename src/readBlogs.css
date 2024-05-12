@@ -1,0 +1,531 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@font-face {
+  font-family: headings;
+  font-display: swap;
+  font-weight: 700;
+  src: url(https://static.saltinourhair.com/build/fonts/SaltHeading.woff2)
+      format("woff2"),
+    url(https://static.saltinourhair.com/build/fonts/SaltHeading.woff)
+      format("woff");
+}
+:root {
+  --lightblue: #d8c4c3;
+  --darkpink: #c0e2e2;
+}
+#img_post {
+  float: right;
+}
+#img_post .img_title {
+  position: absolute;
+  top: -10%;
+  right: -10%;
+  z-index: -1;
+  width: 975px;
+  height: 750px;
+  -webkit-mask-image: url("./image/readblog.svg");
+}
+#img_post .img_custom {
+  position: absolute;
+  top: 0;
+  right: -40px;
+  z-index: -1;
+  width: 875px;
+  height: 750px;
+}
+.post-cover_content {
+  color: #353535;
+  line-height: 29.6px;
+  margin: 40px 0 0;
+  padding: 60px 0 0;
+}
+.post-cover_content-container {
+  display: flex;
+  flex-direction: column;
+}
+.post-breadcrums_list {
+  display: flex;
+  font-family: "Merriweather Sans";
+  margin: 17px 40px;
+}
+.post-breadcrums_list a {
+  background-image: linear-gradient(
+      transparent calc(100% - 0.45em),
+      var(--darkpink) 0
+    ),
+    linear-gradient(transparent calc(100% - 0.45em), var(--lightblue) 0);
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 1.1px;
+  line-height: 19.5px;
+  text-transform: uppercase;
+}
+.post-breadcrums_list a:hover {
+  background-image: linear-gradient(
+      transparent calc(100% - 0.45em),
+      var(--lightblue) 0
+    ),
+    linear-gradient(transparent calc(100% - 0.45em), var(--darkpink) 0);
+}
+.icon_chevRight {
+  position: relative;
+  bottom: -2px;
+}
+.header-author {
+  font-family: "Merriweather Sans";
+  display: flex;
+  margin: 20px 0 20px 40px;
+}
+.header-author img {
+  width: 56px;
+  height: 56px;
+  border-radius: 51% 49% 49% 51% / 59% 56% 44% 41%;
+}
+.header-author_row2 {
+  flex-direction: column;
+  font-size: 14px;
+  line-height: 16.52px;
+  margin-left: 12px;
+}
+.author-name {
+  font-weight: 700;
+  margin-top: 10px;
+}
+.author-update-at {
+  margin-top: 8px;
+}
+.author-like {
+  display: flex;
+  line-height: 16.52px;
+  margin: 13px 0 0 20px;
+}
+.author-like button {
+  border: none;
+  background-color: #ffff;
+}
+.icon_OutlineHeart {
+  font-size: 25px;
+}
+.icon_FillHeart {
+  font-size: 25px;
+  color: red;
+}
+.author-like-number {
+  margin: 17px 0;
+}
+.post-cover_title {
+  font-family: "Merriweather Sans";
+  font-size: 55px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 70px;
+  width: 45%;
+  margin: 0 0 8px -2px;
+  padding: 0 40px;
+  /* white-space: nowrap; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 200px;
+}
+.post-cover_content-container > p {
+  font-family: "Merriweather";
+  font-size: 19px;
+  line-height: 35.15px;
+  width: 45%;
+  margin-top: 17px;
+  padding: 0px 40px;
+  text-align: justify;
+  /* width: 300px; */
+}
+.blog-container {
+  color: #353535;
+  font-size: 19px;
+  line-height: 35.15px;
+  text-align: justify;
+  display: flex;
+  margin-top: 100px;
+}
+.blog-article {
+  padding-left: 100px;
+  display: flex;
+  flex-direction: column;
+  flex: 10;
+  height: 100vh;
+  overflow: scroll;
+}
+.blog-article h2 {
+  font-family: "Merriweather Sans";
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 46px;
+  width: 95%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 94px;
+}
+.blog-article p {
+  font-family: "Merriweather";
+  margin: 27px 0;
+  width: 95%;
+}
+.blog-article::-webkit-scrollbar {
+  display: none;
+}
+.f-image2 img {
+  width: 44%;
+  height: 511px;
+  margin: 0 10px;
+  border-radius: 10px;
+}
+.f-image1 img {
+  border-radius: 10px;
+  width: 90%;
+  height: 1040px;
+  margin: 0 10px;
+}
+.sidebar-articles {
+  line-height: 29.6px;
+  float: right;
+  flex: 6;
+  margin-top: 30px;
+}
+.sidebar-articles_title {
+  font-family: headings;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  line-height: 25.9px;
+  margin: 0px 0px 8px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.sidebar-articles_container {
+  width: 430px;
+  /* height: 225px; */
+  background-color: #f5f5f5;
+  border-radius: 15px;
+  line-height: 29.6px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+}
+.article-text-block {
+  border-radius: 7px;
+  display: flex;
+  font-size: 10px;
+  line-height: 18.5px;
+  margin: -2px 0 0;
+  padding: 7px;
+}
+.article-text-block_image img {
+  border-radius: 5px;
+  width: 90px;
+  height: 60px;
+  transition: 0.5s;
+}
+.article-text-block_content {
+  margin-left: 14px;
+}
+.article-text-block_content h2 {
+  font-family: "Merriweather Sans";
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.1px;
+  line-height: 23.25px;
+  margin-top: 7px;
+  white-space: nowrap;
+  width: 280px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.sidebar-articles_container a:hover {
+  background-color: #e6e6e6;
+}
+.article-text-block_image:hover img {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+.related-category_link {
+  margin-top: 50px;
+  color: #353535;
+  font-family: "Merriweather Sans";
+}
+.related-category_card {
+  width: 80%;
+  height: 350px;
+  border-radius: 20px;
+  background-color: #f2f2f2;
+  margin: 0 auto;
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.25);
+  background-image: url(../src/image/search-bubbles.png),
+    url(../src/image/search-bubbles.png), url(../src/image/search-bubbles.png);
+  background-position: top right;
+  background-size: cover, cover, cover, cover;
+  background-color: #f0e8e7;
+}
+
+.related-category_link h3 {
+  font-size: 16px;
+  padding: 80px 0 0px 100px;
+  position: relative;
+  z-index: 1;
+}
+.related-category_title {
+  font-size: 124px;
+  font-weight: bold;
+  position: relative;
+  top: -20px;
+  padding-left: 100px;
+  z-index: 1;
+}
+.related-category_title .text {
+  color: var(--lightblue);
+  text-shadow: -10px -10px 0px #ffff;
+  letter-spacing: 2px;
+}
+.circle-icon {
+  width: 55px;
+  height: 55px;
+  background-color: #353535;
+  margin: -20px 0 0 100px;
+  border-radius: 100px;
+  position: relative;
+  left: 70px;
+
+  z-index: 2;
+  transition: 0.5s;
+}
+.circle-icon .icon_ArrowRight {
+  position: relative;
+  right: -7px;
+  bottom: -7px;
+  color: #ffff;
+  font-size: 40px;
+}
+.related-category_card a:hover .circle-icon {
+  transform: scale(1.1);
+  background-color: indianred;
+  transition: 0.5s;
+}
+.img_tilte_blog {
+  position: relative;
+  top: -290px;
+  float: right;
+  width: 50%;
+  height: 350px;
+  border-radius: 38% 0% 17% 42% / 87% 100% 0% 89%;
+}
+.img_tilte_custom {
+  float: right;
+  position: relative;
+  top: -290px;
+  left: 100px;
+}
+.comments-contain {
+  margin-top: 100px;
+  font-family: headings;
+  width: 100vw;
+}
+.comments-area {
+  width: 736px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  color: #353535;
+}
+.comments-title {
+  letter-spacing: -0.6px;
+  font-size: 40px;
+  line-height: 52px;
+  margin: 0 8px;
+}
+.comments-respond {
+  font-size: 16px;
+  padding: 25px 0;
+}
+.comments-reply-title {
+  letter-spacing: -0.225px;
+  line-height: 19.5px;
+  margin: 15px 0 7.5px;
+  font-family: headings;
+}
+.comments-form label {
+  font-family: headings;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 26px;
+  margin: 0 0 7px;
+}
+.comments-form textarea {
+  background-color: #f5f5f5;
+  border-color: #f2f2f2;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 1px;
+  font-family: "Merriweather";
+  margin: 5px 0 15px;
+  padding: 16px 12px;
+  width: 100%;
+  height: 200px;
+}
+.comments-form > button {
+  transition: 0.5s;
+  background-color: #f1bc68;
+  border: none;
+  border-radius: 1287px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  line-height: 24px;
+  margin: 0 0 15px;
+  padding: 9px 26px;
+  color: #353535;
+  text-align: center;
+  text-transform: uppercase;
+  float: right;
+  cursor: pointer;
+}
+.comments-list {
+  margin-top: 100px;
+  font: 15px;
+  line-height: 27px;
+}
+.parent {
+  display: list-item;
+  font-family: "Merriweather";
+  text-align: left;
+}
+.comment {
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  font-size: 14px;
+  line-height: 26px;
+  margin: 0 0 28px;
+  padding: 21px 28px;
+}
+.comment-data {
+  font-family: "Merriweather Sans";
+  display: flex;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 27px;
+  margin: 0 0 8px;
+}
+.reply {
+  display: inline-flex;
+}
+.comment p {
+  margin: 0 0 14px;
+}
+.comment-reply {
+  border: 1px solid #999999;
+  color: #353535;
+  border-radius: 1287px;
+  text-align: center;
+  letter-spacing: 1.1px;
+  font-weight: 700;
+  line-height: 13px;
+  margin-top: 15px;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.reply:hover button {
+  background-color: #555555;
+  color: #ffff;
+}
+.comments-form .cancel {
+  border: none;
+  font-size: 13px;
+  font-family: "Merriweather";
+  text-decoration-line: underline;
+  margin-bottom: 10px;
+  background-color: #ffff;
+  cursor: pointer;
+}
+.comments-reply {
+  margin-bottom: 70px;
+}
+.comment-replyy {
+  border: 1px solid #999999;
+  background-color: #ffff;
+  color: #353535;
+  border-radius: 1287px;
+  text-align: center;
+  letter-spacing: 1.1px;
+  font-weight: 700;
+  line-height: 13px;
+  margin-top: 15px;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.icon_FillCircleFill {
+  margin: 0 7px;
+  font-size: 4px;
+  position: relative;
+  top: 12px;
+}
+.comment-more {
+  float: right;
+}
+.icon_OulineMore {
+  font-size: 25px;
+}
+.comment-more:hover .comment-edit-delete {
+  display: block;
+}
+.comment-edit-delete {
+  display: none;
+  width: 90px;
+  position: absolute;
+  right: 3px;
+  z-index: 1;
+  text-align: center;
+  background-color: #ffff;
+  box-shadow: 0px 0px 5px 0.1px #999999;
+  border-radius: 5px;
+}
+.comment-edit-delete button {
+  color: #807e7e;
+  font-size: 13px;
+  font-family: headings;
+  border: none;
+  background-color: #ffff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.comment-edit-delete button:hover {
+  transform: scale(1.1);
+  color: #353535;
+}
+.read-more {
+  text-align: center;
+}
+.read-more > button {
+  transition: 0.5s;
+  background-color: #f1bc68;
+  border: none;
+  border-radius: 1287px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  line-height: 24px;
+  margin: 0 0 15px;
+  padding: 9px 40px;
+  color: #353535;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.icon_ChevronDown {
+  font-size: 20px;
+  position: relative;
+  top: 5px;
+}
+.read-more button:hover {
+  transform: scale(1.1);
+  background-color: indianred;
+  color: #ffff;
+  transition: 0.5s;
+}

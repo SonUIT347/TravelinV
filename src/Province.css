@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@font-face {
+  font-family: headings;
+  font-display: swap;
+  font-weight: 700;
+  src: url(https://static.saltinourhair.com/build/fonts/SaltHeading.woff2)
+      format("woff2"),
+    url(https://static.saltinourhair.com/build/fonts/SaltHeading.woff)
+      format("woff");
+}
+@import url("https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap");
+.province-container {
+  height: 100%;
+}
+.head-page {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 600px;
+  margin: 0 30px;
+}
+.travel-in {
+  font-family: headings;
+  /* top: 9rem; */
+  margin-top: 120px;
+  font-size: 50px;
+  left: 35px;
+  font-family: "Oooh Baby", cursive;
+  font-weight: bold;
+}
+.provinceName {
+  color: transparent;
+  -webkit-text-stroke: 2px #cec4c4;
+  text-shadow: 7px 8px 0px #d8c4c3;
+  left: 5rem;
+  font-weight: bold;
+  /* position: relative; */
+  width: 22rem;
+  /* top: 13rem; */
+  font-size: 120px;
+  line-height: 120px;
+  font-family: headings;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.describe {
+  width: 380px;
+  
+  margin: 20px;
+
+  font-family: "Merriweather Sans";
+}
+#parent .img1 {
+  /* position: absolute; */
+  z-index: -1;
+  top: 0;
+  /* left: 30rem; */
+  width: 600px;
+  height: 600px;
+  -webkit-mask-image: url("./image/download.svg");
+}
+.pickade {
+  /* position: absolute; */
+  /* left: 85rem;
+  top: 9.5rem; */
+  font-family: "Oooh Baby", cursive;
+  font-weight: bold;
+  font-size: 30px;
+  margin-left: 25px;
+}
+
+.prode {
+}
+#parent {
+}
+.pick-destination {
+  margin-right: 24px;
+}
+.option-board {
+  width: 16rem;
+  /* height: 20rem; */
+  border-radius: 20px;
+  /* position: absolute; */
+  top: 12.5rem;
+  left: 83rem;
+  border: 1px solid #d8c4c3;
+  box-shadow: 0px 0px 5px 2px #d2d2d2;
+  display: flex;
+  gap: 5px;
+  padding: 5px 10px;
+  flex-direction: column;
+  margin-top: 15px;
+}
+.option-item {
+  border-bottom: 1px solid #d8c4c3;
+  display: flex;
+  align-items: center;
+  /* height: 60px; */
+  font-weight: bold;
+  font-family: "Merriweather Sans";
+  /* position: relative; */
+  width: 14rem;
+  /* left: 14px; */
+  /* padding: 0 10px; */
+}
+
+.img-item {
+  /* position: relative; */
+  border-radius: 70% 70% 50% 50%;
+  margin: 5px 10px;
+  height: 40px;
+  width: 40px;
+}
+
+.name {
+  /* position: relative; */
+  top: 20px;
+  left: 15px;
+}
+
+
+.option-board a {
+  text-decoration: none;
+  color: #353535;
+}
+
+.option-board a:hover {
+  text-decoration: underline !important;
+}
+
+.province-search-container {
+  margin: 0px auto;
+  margin-top: 100px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.province-search-container input {
+  font-size: 25px;
+  border-radius: 20px;
+  width: 35rem;
+  height: 4rem;
+  width: 100% !important;
+  padding-left: 15px;
+  /* position:absolute; */
+  /* top: 54rem;
+ left: 34.5rem; */
+}
+.province-input-container {
+  width: 600px;
+  height: 50px;
+  position: relative;
+}
+.province-input-container input::placeholder {
+  font-weight: bold;
+  opacity: 0.5;
+  color: #353535;
+  font-size: 25px;
+}
+.province-input-container input:focus {
+  outline: none;
+}
+
+.waylf {
+  /* position: absolute; */
+  /* top: 51rem;
+  left: 35.5rem; */
+  font-size: 25px;
+  font-family: headings;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+
+.search-icon {
+  position: absolute;
+  top: 5px;
+  /* left: 66.5rem; */
+  right: 10px;
+  font-size: 35px;
+  padding-left: 8px;
+  padding-top: 2px;
+  width: 50px;
+  height: 50px;
+  border-radius: 60% 60% 50% 50%;
+  color: white;
+  background-color: #f1bc68;
+}
+.article {
+  /* position: absolute; */
+  display: flex;
+  flex-wrap: wrap;
+  /* top: 60rem;
+  left: 17.9rem; */
+  /* width: 1220px; */
+  margin: 50px 175px;
+  width: 100%;
+
+  /* gap: 5px; */
+  justify-content: flex-start;
+}
+.article-item {
+  height: 450px;
+  width: 400px;
+  overflow: hidden;
+  margin: 20px;
+  border-radius: 10px;
+
+  position: relative;
+
+  transition: all 0.8s ease;
+}
+.article-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+}
+.article-item img:hover {
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.05);
+  filter:brightness(80%);
+}
+.title-article {
+  position: absolute;
+  width: 330px;
+  top: 22rem;
+  left: 10px;
+  font-size: 25px;
+  color: white;
+  font-family: "Merriweather Sans";
+  z-index: 100;
+
+  line-height: 30px;
+  height: 60px;
+  /* overflow: hidden; */
+  text-overflow: ellipsis;
+}
+
+.author-article {
+  position: absolute;
+  top: 19rem;
+  left: 10px;
+  font-size: 20px;
+  color: white;
+  z-index: 1;
+}
+.pagination-bar {
+  position: absolute;
+  /* bottom: 50%; */
+}

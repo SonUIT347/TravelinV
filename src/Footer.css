@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap");
+footer {
+  margin-top: 150px;
+}
+.page-foot_background img {
+  width: 100%;
+  height: 134px;
+  margin-bottom: -10px;
+  filter: brightness(100%) !important;
+
+}
+.page-foot {
+  background-color: #f0e7e8;
+}
+.page-foot_container {
+  width: 80%;
+ 
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  
+}
+.newsletter_title {
+  display: inline-block;
+  font-size: 46px;
+  letter-spacing: -0.69px;
+  line-height: 59px;
+  margin: 0 0 -5px;
+}
+.newsletter_title span {
+  font-family: "Oooh Baby", cursive;
+  font-weight: 200;
+  margin: 5px 0 0 12px;
+}
+.newsletter_text {
+  display: inline-block;
+  font-family: "Merriweather Sans";
+  line-height: 1.1px;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 200;
+  margin: 0 0 16px;
+}
+.newsletter_submit {
+  color: #353535;
+  transition: 0.5s;
+  background-color: #f1bc68;
+  border: none;
+  border-radius: 1287px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  line-height: 24px;
+  padding: 9px 40px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.newsletter_submit:hover {
+  transform: scale(1.1);
+  background-color: indianred;
+  color: #ffff;
+  transition: 0.5s;
+}
+.sitemap {
+  /* width: 50%; */
+  display: flex;
+  justify-content: space-between;
+  line-height: 26px;
+  margin: 50px 0;
+  flex-wrap: nowrap;
+}
+.sitemap > ul {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+.sitemap > ul a,
+.sitemap > ul {
+  font-size: 14px;
+  letter-spacing: 1.1px;
+  margin: 0 10px;
+  white-space: nowrap;
+}
+.sitemap > ul li:hover {
+  text-decoration: underline;
+}
+.contact {
+  position: relative;
+  left: 3px;
+ 
+}
+
+.contact-text {
+  padding-left: 9px;
+}
+.contact:hover {
+  text-decoration: none !important;
+
+}
+.contact > ul a {
+  font-family: "Merriweather Sans";
+  font-weight: 200;
+  text-transform: none;
+}
+.contact > a:hover {
+  text-decoration: underline;
+}
+.link-gmail {
+  position: absolute;
+  margin: 10px 0;
+  top: 20px;
+}
+.contact_social {
+  display: flex;
+    position: absolute;
+    top: 60px;
+
+}
+.contact_social_container a {
+  display: flex;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 51% 49% 49% 51% / 59% 56% 44% 41%;
+  background-color: #f5f4f2;
+  margin-right: 10px;
+}
+.icon_contact_social {
+  width: 18px;
+  height: 18px;
+  color: #353535;
+  margin: 0 auto;
+}
+.contact_social_container:hover{
+    transform: scale(1.1);
+}
+.foot-ins_image{
+    display: flex;
+    width: 400px;
+    height: 400px;
+    float:right;
+    position: absolute;
+    bottom: 80px;
+    /* left: 610px; */
+    right: 0;
+    -webkit-mask-image: url('./image/download.svg');
+}
+.img_ins_custom{
+    width: 101%;
+    height: 101%;
+    position: absolute;
+    right: -2px;
+    bottom: -2px;
+    z-index: 2;
+}
+.img_ins{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+}
+.foot-ins_content{
+    width: 100%;
+    display: flex;
+    font-size: 14px;
+    line-height: 18.2px;
+    position: absolute;
+    left: 75%;
+    top: 50%;
+    transform: translate(-50%);
+    z-index: 2;
+}
+.icon_Instagram{
+    color: #ffff;
+    font-size: 28px;
+    margin-right: 10px;
+}
+.foot-ins_content p{
+    width: 50%;
+    color: #ffff;
+    font-size: 14px;
+    margin: 0 0 14px;
+    text-align: left;
+}
+.icon_arrowRight{
+    animation-name: arrowRight;               
+    animation-duration: 1s;   
+    animation-direction: alternate;          
+    animation-iteration-count: infinite;
+    font-size: 14px;
+    position: relative;
+    top: 3px;
+    margin-left: 10px;
+}
+@keyframes arrowRight {
+    from {
+        margin-left: 10px;
+    }
+    to {  
+        margin-left: 20px;
+    }
+}
+.foot-ins_image a:hover .img_ins{
+    filter:brightness(80%);
+}
+.foot-text, .foot-text a{
+    font-family: "Merriweather Sans";
+    font-size: 12px;
+    color: #4a4a4a;
+    font-weight: 200;
+}
+.foot-text{
+    margin-left: 10px;
+    padding-bottom: 10px;
+}
+.foot-text a:hover{
+    text-decoration: underline;
+}
+.icon_CopyrightCircle{
+    font-size: 12px;
+    color: #4a4a4a;
+    position: relative;
+    top: 1px;
+}

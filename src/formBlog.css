@@ -1,0 +1,340 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;1,100;1,200&display=swap");
+@font-face {
+  font-family: headings;
+  font-display: swap;
+  font-weight: 700;
+  src: url(https://static.saltinourhair.com/build/fonts/SaltHeading.woff2)
+      format("woff2"),
+    url(https://static.saltinourhair.com/build/fonts/SaltHeading.woff)
+      format("woff");
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.nav-container {
+  display: flex;
+  /* font-family: "Merriweather Sans"; */
+  font-family: headings;
+  margin: 100px 150px;
+}
+.nav-container a {
+  /* display: flex; */
+  /* align-items: center; */
+  background-image: linear-gradient(
+      transparent calc(100% - 0.45em),
+      var(--darkpink) 0
+    ),
+    linear-gradient(transparent calc(100% - 0.45em), var(--lightblue) 0);
+
+  background-position: 0% 0%, 0% 0%;
+  background-size: 0% 100%, 100% 100%;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 1.1px;
+  line-height: 19.5px;
+  text-transform: uppercase;
+  /* background-position: 0px 153px; */
+}
+.nav-container a:hover {
+  background-image: linear-gradient(
+      transparent calc(100% - 0.45em),
+      var(--lightblue) 0
+    ),
+    linear-gradient(transparent calc(100% - 0.45em), var(--darkpink) 0);
+}
+.heading {
+  margin: 20px 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.heading h1 {
+  /* margin: 30px; */
+  font-size: 50px;
+}
+.form {
+  margin: 50px 100px;
+  display: flex;
+  justify-content: center;
+}
+.profile-title {
+  margin-left: 50px !important;
+}
+.container-image {
+  width: 400px;
+  margin-right: 50px;
+  margin-top: 100px;
+}
+.preview {
+  border: 2px dashed #353535;
+  width: 70%;
+  height: 350px;
+  color: white;
+  font-size: 22px;
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.preview--icon {
+  font-size: 100px;
+  margin-bottom: 20px;
+  color: #353535;
+}
+.preview img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.preview span {
+  color: #353535;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+.input {
+  width: 700px;
+  height: 750px;
+  overflow: scroll;
+  
+}
+.input::-webkit-scrollbar {
+  display: none;
+}
+.input input[type="text"] {
+  border: 1px solid #353535;
+  padding: 10px;
+  border-radius: 5px;
+  display: block;
+  width: 700px;
+  margin: 10px 0;
+  letter-spacing: 0.7px;
+  
+
+}
+.input input[type="text"]::placeholder{
+  font-family: "Merriweather", serif;
+  font-size:15px !important;
+}
+.input textarea {
+  border: 1px solid #353535;
+  padding: 10px;
+  border-radius: 5px;
+  display: block;
+  width: 700px;
+  height: 100px;
+  margin: 10px 0;
+  letter-spacing: 0.7px;
+  font-family: "Merriweather", serif;
+  max-width:100%;
+  font-size:15px !important;
+}
+
+.image-item {
+  display: flex;
+  margin: 10px;
+  width: 200px;
+  height: 150px;
+  padding: 10px;
+  color: #353535;
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.upload__image-wrapper {
+  display: flex;
+  height: 170px;
+}
+.preview-des {
+  border: 2px dashed #353535;
+  height: 150px;
+  width: 250px;
+  color: white;
+  font-size: 22px;
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.add-img {
+  border: 2px dashed #353535;
+  height: 150px;
+  width: 700px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  margin: 10px 0;
+  border-radius: 6px;
+  color: #353535;
+
+  overflow: hidden;
+}
+
+.preview_des--icon {
+  font-size: 80px;
+  margin: 10px 0;
+  color: #353535;
+}
+.preview-des span {
+  color: #353535;
+  font-size: 16px;
+  padding: 10px 0;
+}
+.description-img {
+  display: flex;
+}
+.description-img input {
+  display: none;
+}
+.addDesc {
+  color: #353535;
+  font-size: 16px;
+}
+.addDesc--icon {
+  font-size: 50px;
+  border: 2px dashed #353535;
+  color: #353535;
+  width: 700px;
+  cursor: pointer;
+  margin: 10px 0;
+  padding: 10px 0;
+  border-radius: 6px;
+}
+
+.add-btn {
+  border: none;
+  outline: none;
+  background-color: #fff;
+  border-radius: 6px;
+}
+
+.add-img-btn {
+  /* font-size: 50px; */
+  border: 2px dashed #353535;
+  color: #353535;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 150px;
+  width: 150px;
+  cursor: pointer;
+  margin: 10px 15px;
+  /* padding: 10px; */
+  border-radius: 6px;
+  font-family: headings;
+  background-color: #fff;
+}
+.hidden {
+  display: none;
+}
+
+.palace {
+  display: flex;
+  align-items: center;
+}
+.palace-list {
+  text-align: right;
+  
+}
+.palace-list option {
+  padding: 10px 0;
+}
+
+#palace {
+  color: #353535;
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 5px 2px #d2d2d2;
+  font-family: "Merriweather Sans";
+  border-radius: 6px;
+  padding: 10px;
+  margin: 10px;
+}
+.submit {
+  width: 200px;
+  margin: 0 auto;
+
+}
+.container-image input[type="submit"] {
+  font-family: headings;
+
+  width: 150px;
+  border: none;
+  outline: none;
+  margin: 25px 50px;
+  cursor: pointer;
+  color: black;
+  font-size: 20px;
+  background-color: #f1bc68;
+  /* padding: 8px 120px; */
+  border-radius: 30px;
+  text-align: center;
+  font-style: normal;
+  
+}
+.container-image input[type="submit"]:hover{
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1.08);
+  background-color: indianred;
+  color: #ffff;
+}
+.des-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  padding: 0 10px;
+  color: #353535;
+  cursor: pointer;
+}
+.remove {
+  font-size: 14px;
+  /* padding: 0 10px; */
+  color: #353535;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-family: "Merriweather Sans";
+  font-style: italic;
+  /* justify-content: space-between; */
+  text-decoration: underline;
+}
+.remove-icon {
+  font-size: 20px;
+ padding: 5px;
+}
