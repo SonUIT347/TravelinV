@@ -56,7 +56,7 @@ const baseURL = process.env.REACT_APP_API_BASE_URL
     // },
   ]);
   useEffect(()=>{
-    Axios.get(`${baseURL}/post/public/getAllPost`).then((response) => {
+    Axios.get(`${baseURL}/post/public/getAllPost/v3`).then((response) => {
       setPost1(response.data)
     })
     Axios.get(`${baseURL}/post/public/getPostAndProvince`).then((response) => {

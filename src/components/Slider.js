@@ -19,7 +19,7 @@ function Slider() {
   //   }
   )
   useEffect(()=>{
-    Axios.get(`${baseURL}/post/public/getAllPost`).then((response) => {
+    Axios.get(`${baseURL}/post/public/getAllPost/v3`).then((response) => {
       setSlide(response.data)
     }) 
   },[pathname])

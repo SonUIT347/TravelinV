@@ -22,7 +22,7 @@ export default function Slider() {
     const FecthSlideImages = async () => {
       try {
         await axios
-          .get(`${baseURL}/post/public/getAllPost`)
+          .get(`${baseURL}/post/public/getAllPost/v3`)
           .then((response) => {
             setSlideImages(response.data);
           });
