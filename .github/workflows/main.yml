@@ -62,4 +62,4 @@ jobs:
         run: az aks get-credentials --resource-group TravelInVServer --name travelinvaks --overwrite-existing
 
       - name: Update Kubernetes deployment
-        run: kubectl rollout restart deployment/travelinv-frontend
+        run: kubectl rollout restart deployment travelinv-frontend -n travelinv
