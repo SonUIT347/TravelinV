@@ -45,21 +45,21 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/travelinv:v1.0.0
           
-      # - name: Set up kubectl
-      #   uses: azure/setup-kubectl@v1
-      #   with:
-      #     version: 'latest'
+      - name: Set up kubectl
+        uses: azure/setup-kubectl@v1
+        with:
+          version: 'latest'
           
-      # - name: Login to Azure
-      #   uses: azure/login@v1
-      #   with:
-      #     client-id: ${{ secrets.AZURE_CLIENT_ID }}
-      #     tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-      #     subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }} 
-      #     enable-AzPSSession: true
+      - name: Login to Azure
+        uses: azure/login@v1
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }} 
+          enable-AzPSSession: true
           
-      # - name: Configure kubectl
-      #   run: az aks get-credentials --resource-group TravelInVServer --name travelinv --overwrite-existing
+      - name: Configure kubectl
+        run: az aks get-credentials --resource-group TravelInVServer --name travelinvaks --overwrite-existing
 
-      # - name: Update Kubernetes deployment
-      #   run: kubectl rollout restart deployment/travelinv
+      - name: Update Kubernetes deployment
+        run: kubectl rollout restart deployment/travelinv-frontend
