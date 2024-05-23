@@ -3,15 +3,13 @@ import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
 import { UserContext } from "../App";
 import { useNavigate } from "react-router-dom";
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const useFormPost = (callback) => {
+  const navigate = useNavigate();
 
-  const navigate = useNavigate()
-
-  const [title, setTitle] = useState({
-  });
+  const [title, setTitle] = useState({});
 
   const [idPost, setIdPost] = useState(0);
 
@@ -20,7 +18,7 @@ const useFormPost = (callback) => {
   const [descriptions, setDescriptions] = useState([]);
 
   const { user } = useContext(UserContext);
-  const baseURL = process.env.REACT_APP_API_BASE_URL
+  const baseURL = process.env.REACT_APP_API_BASE_URL;
   useEffect(() => {
     axios
       .get(`${baseURL}/public/province`)
@@ -47,89 +45,88 @@ const useFormPost = (callback) => {
 
   const handleCreatePost = async (e) => {
     e.preventDefault();
-    var id = 0
+    var id = 0;
     const formData = new FormData();
     const obj = {
-      "title": title.title,
-      'id_province': title.idProvince,
-      "demo_description": title.demo_description
-    }
-    if (title.image) {
+      title: title.title,
+      id_province: title.idProvince,
+      demo_description: title.demo_description,
+    };
 
-      const json = JSON.stringify(obj);
+    try {
+      if (title.image) {
+        const json = JSON.stringify(obj);
+        const blob = new Blob([json], { type: "application/json" });
+        formData.append("postRequest", blob);
+        formData.append("postImage", title.image);
 
-      const blob = new Blob([json], {
-        type: 'application/json'
-      });
-      formData.append('postRequest', blob)
-      formData.append("postImage", title.image);
-      await axios
-        .post(`${baseURL}/post/createPost`, formData, {
-          headers: {
-            "Authorization": `Bearer ${user.token}`,
-            "Content-Type": "multipart/form-data"
+        const response = await axios.post(
+          `${baseURL}/post/createPost`,
+          formData,
+          {
+            headers: {
+              Authorization: `Bearer ${user.token}`,
+              "Content-Type": "multipart/form-data",
+            },
           }
-        })
-        .then((res) => {id = res.data})
-        .catch((error) => console.error(error));
-    } else {
-      const json = JSON.stringify(obj);
+        );
+        id = response.data;
+      } else {
+        const json = JSON.stringify(obj);
+        const blob = new Blob([json], { type: "application/json" });
+        formData.append("postRequest", blob);
 
-      const blob = new Blob([json], {
-        type: 'application/json'
-      });
-      formData.append('postRequest', blob)
-      // formData.append("postRequest", "{\"title\":\"12das3\",\"id_province\":\"4\",\"demo_description\":\"fdhf\"}");
-      await axios.post(`${baseURL}/post/createPost`, formData, {
-        headers: {
-          "Authorization": `Bearer ${user.token}`,
-          'Content-Type': 'multipart/form-data', // Ensure correct Content-Type header
-        }
-      }).then((res) =>
-        id = res.data
-      )
-        .catch((error) => console.error(error));
-    }
-
-    for (let i = 0; i < descriptions.length; i++) {
-      if (descriptions[i]) {
-        if (descriptions[i].image1 || descriptions[i].image2) {
-          const obj = {
-
-            "description": descriptions[i].description,
-            "des_title": descriptions[i].title,
-            "id_post": id
+        const response = await axios.post(
+          `${baseURL}/post/createPost`,
+          formData,
+          {
+            headers: {
+              Authorization: `Bearer ${user.token}`,
+              "Content-Type": "multipart/form-data",
+            },
           }
-          const json = JSON.stringify(obj);
+        );
+        id = response.data;
+      }
 
-          const blob = new Blob([json], {
-            type: 'application/json'
-          });
-          const uploadDataTitle = new FormData();
-          uploadDataTitle.append("DesImage1", descriptions[i].image1);
-          uploadDataTitle.append("DesImage2", descriptions[i].image2);
-          uploadDataTitle.append("description", blob);
-          await axios
-            .post(
+      for (let i = 0; i < descriptions.length; i++) {
+        if (descriptions[i]) {
+          if (descriptions[i].image1 || descriptions[i].image2) {
+            const obj = {
+              description: descriptions[i].description,
+              des_title: descriptions[i].title,
+              id_post: id,
+            };
+            const json = JSON.stringify(obj);
+            const blob = new Blob([json], { type: "application/json" });
+            const uploadDataTitle = new FormData();
+            uploadDataTitle.append("DesImage1", descriptions[i].image1);
+            uploadDataTitle.append("DesImage2", descriptions[i].image2);
+            uploadDataTitle.append("description", blob);
+
+            await axios.post(
               `${baseURL}/description/createDes`,
               uploadDataTitle,
               {
                 headers: {
-                  "Authorization": `Bearer ${user.token}`,
-                  'Content-Type': 'multipart/form-data'
-                }
+                  Authorization: `Bearer ${user.token}`,
+                  "Content-Type": "multipart/form-data",
+                },
               }
-            )
-            .then((res) => console.log(res.data))
-            .catch((error) => console.log(error))
-        } 
+            );
+          }
+        }
       }
 
-      // navigate('/')
+      toast.success("Posted successfully, awaiting moderation!!!", {
+        position: toast.POSITION.TOP_RIGHT,
+      });
+    } catch (error) {
+      console.error(error);
+      toast.error("An error occurred while posting. Please try again.", {
+        position: toast.POSITION.TOP_RIGHT,
+      });
     }
-    // setTimeout(() => {
-    //   window.location.reload(false)
-    // }, 4000);
   };
   return {
     title,
