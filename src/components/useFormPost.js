@@ -18,7 +18,7 @@ const useFormPost = (callback) => {
   const [descriptions, setDescriptions] = useState([]);
 
   const { user } = useContext(UserContext);
-  const baseURL = process.env.REACT_APP_API_BASE_URL || "http://travelinv-java-backend:3100"
+  const baseURL = process.env.REACT_APP_API_BASE_URL 
   useEffect(() => {
     axios
       .get(`${baseURL}/public/province`)

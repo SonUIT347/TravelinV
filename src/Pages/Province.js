@@ -7,7 +7,7 @@ import removeVietnameseTones from "../components/removeVietnameseTones";
 import axios from "axios";
 
 function App() {
-  const baseURL = process.env.REACT_APP_API_BASE_URL || "http://travelinv-java-backend:3100"
+  const baseURL = process.env.REACT_APP_API_BASE_URL
   const location = useLocation();
 
   const [provincePost, setProvincePost] = useState([]);

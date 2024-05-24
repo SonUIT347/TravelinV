@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Axios, * as others from 'axios';
-const baseURL = process.env.REACT_APP_API_BASE_URL || "http://travelinv-java-backend:3100"
+const baseURL = process.env.REACT_APP_API_BASE_URL
 function GoNext() {
   const [places, setPlace] = useState([
     

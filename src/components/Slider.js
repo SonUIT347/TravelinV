@@ -3,7 +3,7 @@ import Axios, * as others from 'axios';
 import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-const baseURL = process.env.REACT_APP_API_BASE_URL || "http://travelinv-java-backend:3100"
+const baseURL = process.env.REACT_APP_API_BASE_URL 
 
 
 function Slider() {

@@ -7,7 +7,7 @@ import { UserContext } from "../App";
 import { MdOutlineCreate } from "react-icons/md";
 
 import { Link } from "react-router-dom";
-const baseURL = process.env.REACT_APP_API_BASE_URL || "http://travelinv-java-backend:3100"
+const baseURL = process.env.REACT_APP_API_BASE_URL 
 const Modal = () => {
   // const [isShow, setIsShow] = useState(false);
 
