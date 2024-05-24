@@ -14,7 +14,7 @@ COPY . .
 
 # Expose port 3000 to the outside world
 EXPOSE 3000
-# ENV REACT_APP_API_BASE_URL=http://20.24.161.68:3100
-# ENV REACT_APP_API_BASE_URL_NODE=http://4.145.181.140:8800
+ENV REACT_APP_API_BASE_URL=http://travelinv-java-backend:3100
+ENV REACT_APP_API_BASE_URL_NODE=http://travelinv-node-backend:8800
 # Command to run the application
 CMD ["npm", "start"]
