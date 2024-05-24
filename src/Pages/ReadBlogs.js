@@ -76,8 +76,8 @@ function ReadBlogs() {
               </IconContext.Provider>
             </li>
             <li>
-              <Link to={`/Blogs/${province.idProvince}`}>
-                {removeVietnameseTones(province.provinceName)}
+              <Link to={`/Blogs/${province.id_province}`}>
+                {removeVietnameseTones(province.province_name)}
               </Link>
               <IconContext.Provider value={{ className: "icon_chevRight" }}>
                 <HiChevronRight />
@@ -167,11 +167,11 @@ function ReadBlogs() {
       {/* Phần chứa thẻ liên kết ra blog */}
       <div className="related-category_link">
         <div className="related-category_card">
-          <Link to={`/Blogs/${province.idProvince}`}>
+          <Link to={`/Blogs/${province.id_province}`}>
             <h3>read all articles about</h3>
             <div className="related-category_title">
               <span className="text">
-                {removeVietnameseTones(province.provinceName).replace(
+                {removeVietnameseTones(province.province_name).replace(
                   /\s+/g,
                   ""
                 )}
