@@ -16,12 +16,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
         
-      # - name: Setup Node.js
-      #   uses: actions/setup-node@v2
-      #   with:
-      #     node-version: '16'
-      # - name: Install Dependencies
-      #   run: npm install --legacy-peer-deps
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+      - name: Install Dependencies
+        run: npm install --legacy-peer-deps
         
       - name: Login to Docker Hub
         uses: docker/login-action@v2
@@ -29,26 +29,26 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
           
-      # - name: build the docker image
-      #   uses: docker/build-push-action@v4
-      #   with:
-      #     context: .
-      #     dockerfile: Dockerfile
-      #     push: false
-      #     tags: ${{ secrets.DOCKERHUB_USERNAME }}/travelinv:v1.0.0
+      - name: build the docker image
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          dockerfile: Dockerfile
+          push: false
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/travelinv:v1.0.0
           
-      # - name: push the docker image to docker hub
-      #   uses: docker/build-push-action@v4
-      #   with:
-      #     context: .
-      #     dockerfile: Dockerfile
-      #     push: true
-      #     tags: ${{ secrets.DOCKERHUB_USERNAME }}/travelinv:v1.0.0
+      - name: push the docker image to docker hub
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          dockerfile: Dockerfile
+          push: true
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/travelinv:v1.0.0
           
-      # - name: Set up kubectl
-      #   uses: azure/setup-kubectl@v1
-      #   with:
-      #     version: 'latest'
+      - name: Set up kubectl
+        uses: azure/setup-kubectl@v1
+        with:
+          version: 'latest'
           
       - name: Login to Azure
         uses: azure/login@v1
@@ -58,8 +58,8 @@ jobs:
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }} 
           enable-AzPSSession: true
           
-      # - name: Configure kubectl
-      #   run: az aks get-credentials --resource-group travelinv --name travelinv --overwrite-existing
+      - name: Configure kubectl
+        run: az aks get-credentials --resource-group travelinv --name travelinv --overwrite-existing
 
-      # - name: Update Kubernetes deployment
-      #   run: kubectl rollout restart deployment travelinv-frontend -n travelinv
+      - name: Update Kubernetes deployment
+        run: kubectl rollout restart deployment travelinv-frontend -n travelinv
