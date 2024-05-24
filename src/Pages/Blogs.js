@@ -9,7 +9,7 @@ import Goto from "../components/Goto"
 
 // const USERNAME = 'taitai'
 // hello
-const baseURL = process.env.REACT_APP_API_BASE_URL
+const baseURL = process.env.REACT_APP_API_BASE_URL || "http://travelinv-java-backend:3100"
 export default function Blogs() {
   const [FeaturedPost, setFeaturePost] = useState([{}])
   const [RecentPost, setRecentPost] = useState([{}])

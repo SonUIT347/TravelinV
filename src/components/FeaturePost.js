@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Axios, * as others from 'axios';
 import { Link } from "react-router-dom";
-const baseURL = process.env.REACT_APP_API_BASE_URL 
+const baseURL = process.env.REACT_APP_API_BASE_URL || "http://travelinv-java-backend:3100"
 function FeaturePost() {
   const { pathname } = useLocation();
   const [posts, setpost] = useState([])

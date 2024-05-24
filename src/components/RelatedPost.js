@@ -7,7 +7,7 @@ function RelatedPost() {
   const [posts1, setPost1] = useState([
     
   ]);
-const baseURL = process.env.REACT_APP_API_BASE_URL
+  const baseURL = process.env.REACT_APP_API_BASE_URL || "http://travelinv-java-backend:3100"
   const [posts2, setPost2] = useState([
     // {
     //   id: 1,

@@ -6,7 +6,7 @@ import { UserContext } from "../App";
 import { Link } from "react-router-dom";
 import axios from "axios";
 const alternatingColor = [" #FFFFFF ", " #F4F2EE"];
-const baseURL = process.env.REACT_APP_API_BASE_URL
+const baseURL = process.env.REACT_APP_API_BASE_URL || "http://travelinv-java-backend:3100"
 
 function DataPost({ posts }) {
   const { user } = useContext(UserContext);

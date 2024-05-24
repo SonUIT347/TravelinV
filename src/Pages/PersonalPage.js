@@ -53,7 +53,7 @@ export default function PersonalPage() {
   const [CountPost, setCountPost] = useState();
   const [CountPostLike, setCountPostLike] = useState();
   const [CountPostPending, setCountPostPending] = useState();
-  const baseURL = process.env.REACT_APP_API_BASE_URL
+  const baseURL = process.env.REACT_APP_API_BASE_URL || "http://travelinv-java-backend:3100"
   const location = useLocation();
 
   useEffect(() => {

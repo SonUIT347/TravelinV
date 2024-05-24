@@ -7,7 +7,7 @@ import { HiChevronRight } from "react-icons/hi";
 import Axios, * as others from "axios";
 import { Link } from "react-router-dom";
 import removeVietnameseTones from "../components/removeVietnameseTones";
-const baseURL = process.env.REACT_APP_API_BASE_URL
+const baseURL = process.env.REACT_APP_API_BASE_URL || "http://travelinv-java-backend:3100"
 const token = localStorage.getItem("accessToken")
 function Admin() {
   const [search, setSearch] = useState([]);

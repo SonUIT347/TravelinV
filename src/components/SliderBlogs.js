@@ -4,7 +4,7 @@ import { HiChevronRight } from "react-icons/hi";
 import { HiChevronLeft } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import axios from "axios";
-const baseURL = process.env.REACT_APP_API_BASE_URL
+const baseURL = process.env.REACT_APP_API_BASE_URL || "http://travelinv-java-backend:3100"
 export default function Slider() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [slideImages, setSlideImages] = useState([{}]);

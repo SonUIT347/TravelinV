@@ -24,7 +24,7 @@ const useReadBlog = (callback) => {
   const [comment, setComment] = useState([]);
 
   const [reply, setReply] = useState([]);
-  const baseURL = process.env.REACT_APP_API_BASE_URL
+  const baseURL = process.env.REACT_APP_API_BASE_URL || "http://travelinv-node-backend:8800"
   const baseURL_NODE = process.env.REACT_APP_API_BASE_URL_NODE
   const [commentInput, setCommentInput] = useState({
     userName: user.userName,
