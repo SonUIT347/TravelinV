@@ -59,7 +59,7 @@ jobs:
           enable-AzPSSession: true
           
       - name: Configure kubectl
-        run: az aks get-credentials --resource-group TravelInVServer --name travelinvaks --overwrite-existing
+        run: az aks get-credentials --resource-group travelinv --name travelinv --overwrite-existing
 
       - name: Update Kubernetes deployment
         run: kubectl rollout restart deployment travelinv-frontend -n travelinv
