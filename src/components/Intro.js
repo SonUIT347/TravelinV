@@ -7,7 +7,7 @@ const baseURL = process.env.REACT_APP_API_BASE_URL
 function Intro() {
   const [places, setPlace] = useState([]);
   useEffect(() => {
-    Axios.get(`${baseURL}/post/public/getGoToProvince`).then((response) => {
+    Axios.get('https://travelinv.azurewebsites.net/api/listprovinces').then((response) => {
       setPlace(response.data);
     });
   }, []);
@@ -54,7 +54,7 @@ function Intro() {
                       return (
                         <div className="next_place-item">
                           <Link to={`/Blogs/${place.idProvince}`}>
-                            <p>{place.province_name}</p>
+                            <p>{place.name}</p>
                           </Link>
                         </div>
                       );
