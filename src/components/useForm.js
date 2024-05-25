@@ -229,7 +229,8 @@ const useForm = (callback) => {
                   loggedIn: true,
                   accountType: res.data.role,
                   image: res.data.avatar,
-                  id_user: res.data.id_user
+                  id_user: res.data.id_user,
+                  email:res.data.email
                 };
                 const jsonUser = JSON.stringify(newSetUser);
                 localStorage.setItem("user", jsonUser);

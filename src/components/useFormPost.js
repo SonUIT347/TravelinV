@@ -121,6 +121,19 @@ const useFormPost = (callback) => {
       toast.success("Posted successfully, awaiting moderation!!!", {
         position: toast.POSITION.TOP_RIGHT,
       });
+      const emailContent = new FormData();
+      emailContent.append("email", user.email)
+      emailContent.append("subject", "Post created successfully")
+      emailContent.append("text", "Post created successfully")
+      try {
+        axios.post(`https://travelinv.azurewebsites.net/api/sendmail`, {
+          "email": user.email,
+          "subject": "Post created successfully",
+          "text": "Post created successfully. Your post is now pending approval. Please wait for admin approval."
+        })
+      } catch (error) {
+        console.log(error)
+      }
     } catch (error) {
       console.error(error);
       toast.error("An error occurred while posting. Please try again.", {
