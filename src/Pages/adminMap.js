@@ -1,15 +1,44 @@
 import "../admin.css";
-import Axios, * as others from "axios";
+import Axios from "axios";
 import { BiX } from "react-icons/bi";
 import { useContext } from "react";
 import { UserContext } from "../App";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 import axios from "axios";
 const alternatingColor = [" #FFFFFF ", " #F4F2EE"];
 const baseURL = process.env.REACT_APP_API_BASE_URL 
 function DataPost({ posts }) {
   const { user } = useContext(UserContext);
   console.log(user);
+  const [formattedDates, setFormattedDates] = useState([]);
+
+  useEffect(() => {
+    const fetchFormattedDates = async () => {
+      const formattedDatesArray = [];
+      for (const post of posts) {
+        try {
+          const response = await axios.post(
+            "https://travelinv.azurewebsites.net/api/formatddmmyy",
+            { date: post.date_time },
+            {
+              headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${user.token}`,
+              },
+            }
+          );
+          formattedDatesArray.push(response.data);
+        } catch (error) {
+          console.error("Error formatting date:", error);
+          formattedDatesArray.push(null);
+        }
+      }
+      setFormattedDates(formattedDatesArray);
+    };
+
+    fetchFormattedDates();
+  }, [posts, user.token]);
   const deletePost = (id) => {
     Axios.delete(`${baseURL}/post/delete/${id}`, { headers: { "Authorization": `Bearer ${user.token}` } })
       .then((res) => console.log(res.data))
@@ -35,16 +64,22 @@ function DataPost({ posts }) {
             style={{ backgroundColor: alternatingColor[id % 2] }}
           >
             <div className="user-name user-item">
-              <img class="avatar-data" src={posts.image} />
+              <img className="avatar-data" src={posts.image} alt="" />
               <Link to={`/Personal/${posts.username}`}>
-                <div class="usename-data">{posts.username}</div>
+                <div className="usename-data">{posts.username}</div>
               </Link>
             </div>
 
             <Link to={`/Blogs/${posts.id_province}/${posts.id_post}`}>
-              <div class="title-data user-item">{posts.post_name}</div>
+              <div className="title-data user-item">{posts.post_name}</div>
             </Link>
-            <div className="createat-data user-item">{posts.date_time}</div>
+            <div className="createat-data user-item">
+            {formattedDates[id] ? (
+              formattedDates[id]
+            ) : (
+              <span>Loading...</span>
+            )}
+          </div>
             <button
               onClick={() => checkPost(posts.id_post)}
               className="status-data user-item"

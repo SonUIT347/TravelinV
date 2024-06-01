@@ -30,7 +30,7 @@ const Modal = () => {
     };
   }, []);
   useEffect(() => {
-    Axios.get(`${baseURL}/post/public/getGoToProvince`).then((response) => {
+    Axios.get('https://travelinv.azurewebsites.net/api/listprovinces').then((response) => {
       setPlace(response.data);
     });
   }, []);
@@ -78,7 +78,7 @@ const Modal = () => {
             return (
               <Link to={`/Blogs/${place.id_province}`} key={place.id_province} >
                 <div className="paplace-item">
-                  <p>{place.province_name}</p>
+                  <p>{place.name}</p>
                 </div>
               </Link>
             );
