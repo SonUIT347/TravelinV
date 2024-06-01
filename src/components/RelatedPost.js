@@ -58,6 +58,7 @@ function RelatedPost() {
   useEffect(()=>{
     Axios.get(`${baseURL}/post/public/getAllPost/v3`).then((response) => {
       setPost1(response.data)
+      // setPost2(response.data)
     })
     Axios.get(`${baseURL}/post/public/getPostAndProvince`).then((response) => {
       setPost2(response.data)
