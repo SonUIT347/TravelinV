@@ -109,33 +109,37 @@ const useReadBlog = (callback) => {
         }`,
         commentInput
       )
-      .then((res) => console.log(res.data));
-
+      .then((res) => {
+        console.log(res.data);
+        // Fetch comments again after a new comment is posted
+        axios
+          .get(`${baseURL_NODE}/Comment/${location.pathname.split("/")[3]}`)
+          .then((res) => setComment(res.data));
+      });
+  
     setCommentInput({ ...commentInput, description: "" });
-
+  
     focustInput.current.focus();
-
-    axios
-      .get(`${baseURL_NODE}/Comment/${location.pathname.split("/")[3]}`)
-      .then((res) => setComment(res.data));
   };
-
+  
   const handleReplys = (idComment) => {
     axios
       .post(`${baseURL_NODE}/CreateReply/${idComment}`, commentInput)
-      .then((res) => console.log(res.data));
-
+      .then((res) => {
+        console.log(res.data);
+        // Fetch replies again after a new reply is posted
+        axios
+          .get(`${baseURL_NODE}/Reply/${location.pathname.split("/")[3]}`)
+          .then((res) => setReply(res.data));
+      });
+  
     setCheckReadBlog({
       ...checkReadBlog,
       keyReply: "",
       replyInput: true,
     });
-
+  
     setCommentInput({ ...commentInput, description: "" });
-
-    axios
-      .get(`${baseURL_NODE}/Reply/${location.pathname.split("/")[3]}`)
-      .then((res) => setReply(res.data));
   };
 
   const handleDeleteComment = (type, idComment) => {

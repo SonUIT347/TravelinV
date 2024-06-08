@@ -5,6 +5,8 @@ import { AiOutlineMore, AiFillEdit, AiFillDelete } from "react-icons/ai";
 import { useContext } from "react";
 import { UserContext } from "../App";
 import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+import { useState } from "react";
 
 export function CommentCard({
   setCheckReadBlog,
@@ -19,6 +21,10 @@ export function CommentCard({
 }) { console.log(comment.idComment === checkReadBlog.checkReply,comment.idComment, checkReadBlog.checkReply)
   const navigate = useNavigate();
   const { user } = useContext(UserContext);
+  const [formattedDates, setFormattedDates] = useState([]);
+  axios.post("https://travelinv.azurewebsites.net/api/formatddmmyy", { date: comment.dateTime }).then((response) => {
+    setFormattedDates(response.data);
+  });
   return (
     <div>
       <div
@@ -68,7 +74,7 @@ export function CommentCard({
           <IconContext.Provider value={{ className: "icon_FillCircleFill" }}>
             <BsFillCircleFill />
           </IconContext.Provider>
-          {comment.dateTime}
+          <div>{formattedDates}</div>
         </div>
         <p>{comment.description}</p>
         <div className="reply">
