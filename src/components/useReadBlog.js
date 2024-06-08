@@ -11,7 +11,7 @@ const useReadBlog = (callback) => {
 
   const location = useLocation();
 
-  const [province, setProvince] = useState({ provinceName: "" });
+  const [province, setProvince] = useState({ province_name: "" });
 
   const [authorPost, setAuthorPost] = useState({});
 
@@ -33,7 +33,7 @@ const useReadBlog = (callback) => {
 
   useEffect(() => {
     axios
-      .get(`${baseURL}/public/province/${location.pathname.split("/")[2]}`)
+      .get(`${baseURL}/public/province/post/${location.pathname.split("/")[2]}`)
       .then((res) =>
         setProvince(
           res.data.reduce((t, v) => {
@@ -63,16 +63,28 @@ const useReadBlog = (callback) => {
       .then((res) => setDesPost(res.data));
 
     axios
-      .post(`${baseURL_NODE}/CheckLike/${user.userName}`, {
-        idPost: location.pathname.split("/")[3],
+      .post(`${baseURL}/like/isLikeExists`, 
+      {
+        id_post: location.pathname.split("/")[3],
+        id_user: user.id_user
+      },
+      {
+        headers: {
+          "Authorization": `Bearer ${user.token}`,
+        }
       })
-      .then((res) =>
+      .then((res) =>{
+        console.log(res.data)
         setCheckReadBlog({ ...checkReadBlog, checkLike: res.data })
-      );
+      }
+
+      ).catch((error) => {
+        console.log(error);
+      })
     axios
       .get(
         `${baseURL}/post/public/getFeaturedPost`
-        
+
       )
       .then((res) => setRelated(res.data));
 
@@ -104,8 +116,7 @@ const useReadBlog = (callback) => {
   const handleComments = () => {
     axios
       .post(
-        `${baseURL_NODE}/CreateComment/${
-          location.pathname.split("/")[3]
+        `${baseURL_NODE}/CreateComment/${location.pathname.split("/")[3]
         }`,
         commentInput
       )
@@ -173,21 +184,50 @@ const useReadBlog = (callback) => {
         .get(`${baseURL_NODE}/Reply/${location.pathname.split("/")[3]}`)
         .then((res) => setReply(res.data));
     }
-    setCommentInput({...commentInput, description: ''})
-    setCheckReadBlog({...checkReadBlog, checkEdit: false, checkReply: '', replyInput: true})
+    setCommentInput({ ...commentInput, description: '' })
+    setCheckReadBlog({ ...checkReadBlog, checkEdit: false, checkReply: '', replyInput: true })
   };
 
   const handleLike = () => {
     if (checkReadBlog.checkLike) {
-      axios.post(`${baseURL_NODE}/Unlike/${user.userName}`, {
-        idPost: location.pathname.split("/")[3],
-      });
-      setCheckReadBlog({ ...checkReadBlog, checkLike: false });
+      axios.post(
+        `${baseURL}/like/delete`,
+        {
+          id_post: location.pathname.split("/")[3],
+          id_user: user.id_user
+        },
+        {
+          headers: {
+            "Authorization": `Bearer ${user.token}`,
+          }
+        }
+      )
+        .then(() => {
+          setCheckReadBlog({ ...checkReadBlog, checkLike: false });
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
     } else {
-      axios.post(`${baseURL_NODE}/Like/${user.userName}`, {
-        idPost: location.pathname.split("/")[3],
-      });
-      setCheckReadBlog({ ...checkReadBlog, checkLike: true });
+      axios.post(
+        `${baseURL}/like/create`,
+        {
+          id_post: location.pathname.split("/")[3],
+          id_user: user.id_user
+        },
+        {
+          headers: {
+            "Authorization": `Bearer ${user.token}`,
+          }
+        }
+      )
+        .then(() => {
+          setCheckReadBlog({ ...checkReadBlog, checkLike: true });
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+
     }
   };
 

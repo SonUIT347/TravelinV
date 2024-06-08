@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios"
 import { Link } from "react-router-dom";
-const baseURL = process.env.REACT_APP_API_BASE_URL
+const baseURL = process.env.REACT_APP_API_BASE_URL 
 const Goto = () =>{
 // const gotoDatas = [
 //     {

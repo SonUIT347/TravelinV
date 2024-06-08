@@ -7,12 +7,12 @@ import removeVietnameseTones from "../components/removeVietnameseTones";
 import axios from "axios";
 
 function App() {
-  const baseURL = process.env.REACT_APP_API_BASE_URL 
+  const baseURL = process.env.REACT_APP_API_BASE_URL
   const location = useLocation();
 
   const [provincePost, setProvincePost] = useState([]);
 
-  const [province, setProvince] = useState({ provinceName: "" });
+  const [province, setProvince] = useState({ province_name: "" });
 
   const [destination, getDestination] = useState([]);
 
@@ -31,7 +31,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get(`${baseURL}/public/province/${location.pathname.split("/")[2]}`)
+      .get(`${baseURL}/public/province/post/${location.pathname.split("/")[2]}`)
       .then((res) =>
         setProvince(
           res.data.reduce((t, v) => {
@@ -66,9 +66,9 @@ function App() {
           <div className="travel-in">Travel in</div>
 
           <div className="provinceName">
-            {removeVietnameseTones(province.provinceName)}
+            {removeVietnameseTones(province.province_name)}
           </div>
-          <p className="describe">{province.describe}</p>
+          <p className="describe">{province.description}</p>
         </div>
         <div id="parent">
           <img className="img1" src={province.image}></img>
@@ -96,14 +96,14 @@ function App() {
             onChange={(text) => {
               setSearch(
                 provincePost.filter((post) => {
-                  return post.postName
+                  return post.post_name
                     .toLowerCase()
                     .includes(text.target.value.toLowerCase());
                 })
               );
             }}
             placeholder={
-              "Type to search within" + " " + province.provinceName + "..."
+              "Type to search within" + " " + province.province_name + "..."
             }
           />
           <div className="search-icon">
@@ -114,11 +114,11 @@ function App() {
 
       <div className="article">
         {currentTableData.map((search) => (
-          <div key={search.idPost} className="article-item">
-            <Link to={`/Blogs/${province.idProvince}/${search.idPost}`}>
+          <div key={search.id_post} className="article-item">
+            <Link to={`/Blogs/${province.id_province}/${search.id_post}`}>
               <img className="img-article" src={search.image} />
-              <div className="title-article">{search.postName}</div>
-              <div className="author-article">{search.userName}</div>
+              <div className="title-article">{search.post_name}</div>
+              <div className="author-article">{search.username}</div>
             </Link>
           </div>
         ))}

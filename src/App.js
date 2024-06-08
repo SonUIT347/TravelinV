@@ -36,7 +36,8 @@ function App() {
         accountType: "",
         image: "",
         token:"",
-        id_user: 0
+        id_user: 0,
+        
       }
     );
   });

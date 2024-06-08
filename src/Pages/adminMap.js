@@ -7,8 +7,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 const alternatingColor = [" #FFFFFF ", " #F4F2EE"];
-const baseURL = process.env.REACT_APP_API_BASE_URL
-
+const baseURL = process.env.REACT_APP_API_BASE_URL 
 function DataPost({ posts }) {
   const { user } = useContext(UserContext);
   console.log(user);

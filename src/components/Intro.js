@@ -3,7 +3,7 @@ import { HiChevronDown } from "react-icons/hi";
 import Axios, * as others from "axios";
 import { Link } from "react-router-dom";
 import { UserContext } from "../App";
-const baseURL = process.env.REACT_APP_API_BASE_URL
+const baseURL = process.env.REACT_APP_API_BASE_URL 
 function Intro() {
   const [places, setPlace] = useState([]);
   useEffect(() => {

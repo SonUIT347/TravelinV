@@ -7,7 +7,7 @@ function RelatedPost() {
   const [posts1, setPost1] = useState([
     
   ]);
-const baseURL = process.env.REACT_APP_API_BASE_URL
+  const baseURL = process.env.REACT_APP_API_BASE_URL 
   const [posts2, setPost2] = useState([
     // {
     //   id: 1,
@@ -58,6 +58,7 @@ const baseURL = process.env.REACT_APP_API_BASE_URL
   useEffect(()=>{
     Axios.get(`${baseURL}/post/public/getAllPost/v3`).then((response) => {
       setPost1(response.data)
+      // setPost2(response.data)
     })
     Axios.get(`${baseURL}/post/public/getPostAndProvince`).then((response) => {
       setPost2(response.data)
