@@ -4,6 +4,7 @@ import FeaturePost from "../components/FeaturePost";
 import GoNext from "../components/GoNext";
 import Slider from "../components/Slider";
 import RelatedPost from "../components/RelatedPost";
+import Footer from "../components/Footer";
 
 
 function Home() {
@@ -17,6 +18,7 @@ function Home() {
       <GoNext />
       <Slider/>
       <RelatedPost />
+      <Footer/>
     </div>
   );
 }
